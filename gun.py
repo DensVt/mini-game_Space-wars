@@ -18,9 +18,11 @@ class Gun():
         self.mright = False
         self.mleft = False
 
+
     def output(self):
         """ Прорисовка пушки """
         self.screen.blit(self.image, self.rect)
+
 
     def update_gun(self):
         """ Обновление позиции пушки """
@@ -30,3 +32,8 @@ class Gun():
             self.center -= 1.5
 
         self.rect.centerx = self.center
+
+
+    def create_gun(self):
+        """ Размещаем пушку по центру внизу """
+        self.center = self.screen_rect.centerx
